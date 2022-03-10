@@ -1,3 +1,4 @@
+CREATE DATABASE ejemplo DEFAULT CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
 CREATE TABLE `users` (
     `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
     `name` varchar(25) NOT NULL,
@@ -8,4 +9,11 @@ CREATE TABLE `users` (
     `rol` int(1) NOT NULL,
     PRIMARY KEY (`id`),
     UNIQUE KEY `matricula` (`matricula`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1;
+
+CREATE TABLE `cursos` (
+    `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+    `name` varchar(255) NOT NULL,
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `name` (`name`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1;
