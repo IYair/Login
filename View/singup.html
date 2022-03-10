@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>Document</title>
+</head>
+<body>
+
+<nav>
+        <div class="nav-wrapper">
+            <a href="../index.html" class="brand-logo"><i class="material-icons">school</i>Portal</a>
+            <ul id="nav-mobile" class="right">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./login.html">Log in</a></li>
+                <li><a href="./singup.html">Sing up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row">
+        <form class="col s12" method="post" name="signup-form" action="../Controller/registerC.php">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input placeholder="Nombre" id="first_name" type="text" class="validate" name="name" required>
+                    <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <input placeholder="Apellido" id="last_name" type="text" class="validate" name="lastname" required>
+                    <label for="last_name">Last Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input placeholder="Matricula" id="matricula" type="number" class="validate" name="matricula" required>
+                    <label for="matricula">ID</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="password" type="password" class="validate" name="password" required>
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="validate" name="email" required>
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <p>
+                <label>
+                    <input class="with-gap" name="rol" type="radio" value="1" required>
+                    <span>Profesor</span>
+                </label>
+                <label>
+                    <input class="with-gap" name="rol" type="radio" value="2" checked required>
+                    <span>Alumno</span>
+                </label>
+            </p>
+            <button class="btn waves-effect waves-light" type="submit" value="register" name="register">Register<i class="material-icons right">send</i>
+            </button>
+        </form>
+    </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
